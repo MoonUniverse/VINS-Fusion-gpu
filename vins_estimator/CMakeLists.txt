@@ -6,6 +6,10 @@ set(CMAKE_CXX_FLAGS "-std=c++11")
 #-DEIGEN_USE_MKL_ALL")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
 
+set(cv_bridge_DIR /usr/local/share/cv_bridge/cmake)
+SET(OpenCV_DIR "/usr/local/share/OpenCV/")
+find_package(OpenCV 3.4.1 REQUIRED)
+
 find_package(catkin REQUIRED COMPONENTS
     roscpp
     std_msgs
@@ -15,10 +19,6 @@ find_package(catkin REQUIRED COMPONENTS
     cv_bridge
     camera_models
     image_transport)
-
-#find_package(OpenCV REQUIRED)
-include(/home/dji/opencv/build/OpenCVConfig.cmake)
-#message(WARNING "OpenCV_VERSION: ${OpenCV_VERSION}")
 
 find_package(Ceres REQUIRED)
 
