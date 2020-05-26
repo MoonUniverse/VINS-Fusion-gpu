@@ -1,0 +1,8 @@
+<launch timeout="100.0">
+
+    <arg name="config_path" default="/home/tx2/catkin_ws/src/config/happymoon/happymoon_stereo_imu_config.yaml" />
+
+    <node name="vins_estimator" pkg="vins" type="vins_node" args=" $(arg config_path)" output="screen">
+    </node>
+
+</launch>
