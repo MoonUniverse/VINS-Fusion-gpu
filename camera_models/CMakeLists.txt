@@ -13,8 +13,9 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Boost REQUIRED COMPONENTS filesystem program_options system)
 include_directories(${Boost_INCLUDE_DIRS})
 
-SET(OpenCV_DIR "/usr/local/share/OpenCV/")
-find_package(OpenCV 3.4.1 REQUIRED)
+# SET(OpenCV_DIR "/usr/local/share/OpenCV/")
+# find_package(OpenCV 3.4.1 REQUIRED)
+include(/usr/local/share/OpenCV/OpenCVConfig.cmake)
 
 # set(EIGEN_INCLUDE_DIR "/usr/local/include/eigen3")
 find_package(Ceres REQUIRED)
